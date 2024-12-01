@@ -139,23 +139,37 @@ html {
 
 /*---------ESTILOS PARA VALIDACION -----------*/
 
-.formulario__grupo-correcto,
-.formulario__validacion--estado {
+.formulario__grupo-correcto .formulario__validacion--estado {
   color: #1ed12d;
   opacity: 1;
 }
 
-.formulario__grupo-incorrecto,
-.formulario__label {
+.formulario__grupo-incorrecto .formulario__label {
   color: #bb2929;
 }
 
-.formulario__grupo-incorrecto,
-.formulario__validacion--estado {
+.formulario__grupo-incorrecto .formulario__validacion--estado {
   color: #bb2929;
   opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__input {
   border: 3px solid #bb2929;
+}
+
+/*-------MEDIA QUERYS----*/
+@media (max-width: 650px) {
+  .form__conteiner {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario__checkbox,
+  .formulario__mensaje,
+  .formulario__grupo--btn-enviar {
+    grid-column: 1;
+  }
+
+  .formulario__btn {
+    width: 100%;
+  }
 }
